@@ -1,0 +1,205 @@
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+/mnt/disk5/home/leranli/.conda/envs/aesthetics/bin/python
+Beginning Experiment
+
+Beginning experiment on: NVIDIA GeForce RTX 4090
+Using  4  GPUs
+
+PyTorch 2.4.1+cu121
+Initializing Experiment...
+Loading Data...
+Using 6200 Train, 3100 Validation, 3100 Test Data
+Shuffling Data...
+700 chairs in the dataset
+
+Total Unlabeled Data at 100%: 31000
+
+Naive Baselines:
+Guess training mean: 0.4847
+Guess training median: 0.4854
+
+Validation Set: [  4   5   7   8  12  16  18  22  26  33  37  44  45  55  60  61  63  66
+  74  75  80  83  98 106 107 111 113 118 122 123 125 129 130 134 143 145
+ 146 150 152 154 159 168 170 177 179 180 182 183 185 189]
+
+
+Test Set: [  2  10  14  19  24  27  30  40  43  46  51  54  56  59  62  71  73  86
+  89  90  92  93  96  97 101 108 109 112 124 126 131 136 137 138 139 141
+ 144 149 153 160 163 175 178 181 184 187 194 195 196 197]
+
+Initializing Models...
+Session created.
+{'adam_optim_betas_pretrain': (0.99, 0.999),
+ 'adjust_learning_rate_during_training': False,
+ 'arch': 'vgg16',
+ 'attribute': 'modern',
+ 'augment_images': False,
+ 'base_rating': 3.0,
+ 'bw_images': True,
+ 'checkpoint_cycle': 100,
+ 'comet_api_key': '',
+ 'comet_project_id': None,
+ 'comet_project_name': '',
+ 'comet_workspace': '',
+ 'cond_h_on_y': True,
+ 'conditional_model': True,
+ 'conventional_baseline_model': 'random_forest',
+ 'create_duplicate_ratings_for_viewpoints': True,
+ 'dataset': 'chairs',
+ 'dining_room_chair_full_inds_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/dining_room_chair_full_inds.csv',
+ 'dining_room_chair_labeled_inds_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/dining_room_chair_labeled_inds.csv',
+ 'dr_to_stdvae_ratio': 0.5,
+ 'e_lr': 0.001,
+ 'empty_cache': True,
+ 'enc_spectral_norm': True,
+ 'enc_use_residual': True,
+ 'enc_use_squeeze_and_excite': True,
+ 'env': {'CUDA_DEVICE_ORDER': 'PCI_BUS_ID',
+         'CUDA_VISIBLE_DEVICES': '0,1,2,3',
+         'computer': 'server'},
+ 'epoch_begin_finetune': 10,
+ 'epochs_pretrained': 60,
+ 'epsilon': 1e-09,
+ 'evaluate_full_test_set': True,
+ 'evaluate_full_validation_set': True,
+ 'evaluate_full_validation_set_combined_model': True,
+ 'evaluate_side_view_only': True,
+ 'evaluate_using_y_mu': True,
+ 'evaluation_criteria': 'l1',
+ 'experiment_type': 'combined_model_train',
+ 'fake_D_KL_dr_scale': 0.5,
+ 'fake_D_KL_stdvae_scale': 2e-06,
+ 'fake_G_KL_dr_scale': 0.5,
+ 'fake_G_KL_stdvae_scale': 2e-06,
+ 'finetune_model': True,
+ 'finetune_optimizer': 'sgd',
+ 'freeze_encoder_weights': True,
+ 'freeze_pretrained_weights': True,
+ 'g_lr': 0.001,
+ 'gen_spectral_norm': True,
+ 'gen_use_residual': True,
+ 'gen_use_squeeze_and_excite': True,
+ 'gpu_count': 4,
+ 'gumbel_softmax_temperature': 0.1,
+ 'image_size': 512,
+ 'images_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_data_grayscale.h5',
+ 'images_per_stage': 1000000,
+ 'inject_masks_into_encoder': False,
+ 'interpolate_N': 0,
+ 'label_loss_scale': 0.01,
+ 'label_loss_start_phase': 1,
+ 'labeled_data_cycle': 50,
+ 'labels_dir': None,
+ 'load_checkpoint': False,
+ 'load_checkpoint_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/checkpoints/7995240_state',
+ 'load_state_dict_strict': False,
+ 'lr_finetune': 1e-05,
+ 'lr_pretrained': 0.0002,
+ 'manual_spec_norm': False,
+ 'mask_loss_scale': 0.025,
+ 'masks_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_data_masks.h5',
+ 'match_x_fade_in_scale': 4.0,
+ 'match_x_metric': 'L1',
+ 'match_x_scale': 4.0,
+ 'match_y_metric': 'L1',
+ 'max_phase': 6,
+ 'min_self_consistency': 0.75,
+ 'momentum': 0.9,
+ 'n_accumulate_gradients': 1,
+ 'n_critic': 1,
+ 'n_generator': 10,
+ 'n_label': 3,
+ 'n_latents': 512,
+ 'nc': 1,
+ 'noise': 'sphere',
+ 'norm_vae_params': False,
+ 'num_baseline_cpu_jobs': 12,
+ 'num_batches_per_epoch_pretrained': 100,
+ 'num_batches_print_freq_train': 10,
+ 'num_batches_print_freq_valid': 5,
+ 'num_combined_model_fc_units': 128,
+ 'num_data_workers': 6,
+ 'num_epoch_save_model_pretrained': 5,
+ 'num_pretrained_fc_units': 128,
+ 'num_random_batches_per_epoch_pretrained_evaluate': 50,
+ 'num_random_forest_trees': 100,
+ 'number_of_epochs_before_dropping_lr': 10,
+ 'number_viewpoints_per_product': 62,
+ 'nz': 509,
+ 'opt_betas': (0.0, 0.99),
+ 'opt_betas_predictor': (0.9, 0.99),
+ 'opt_epsilon': 1e-08,
+ 'optimizer': 'adam',
+ 'p_lr': 0.0002,
+ 'p_optimizer': 'adam',
+ 'percentage_of_training_data': 1.0,
+ 'percentage_of_unlabeled_data': 1.0,
+ 'pred_loss_scale': 0.5,
+ 'pred_loss_start_phase': 4,
+ 'predictive_model_nonlinear': True,
+ 'pretrained_model_use_attributes': True,
+ 'pretrained_tower_batchnorm': True,
+ 'print_frequency': 50,
+ 'progressive_phase_offset': 0,
+ 'progressive_step_offset': 0,
+ 'random_seed': 0,
+ 'rated_viewpoint': 25,
+ 'ratings_dataset_path': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_ratings_traditional_modern.csv',
+ 'real_x_KL_dr_scale': 0.5,
+ 'real_x_KL_stdvae_scale': 2e-06,
+ 'reconstruct_transformed_labels': False,
+ 'reconstructions_N': 16,
+ 'reparametrize': False,
+ 'reset_optimizers': True,
+ 'result_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/results',
+ 'sample_N': 16,
+ 'save_checkpoint_cycle': 1000,
+ 'save_checkpoints': True,
+ 'save_computed_baseline_features': False,
+ 'save_output_log': True,
+ 'self_attention_layer': 5,
+ 'sequentially_freeze_weights_during_training': True,
+ 'start_phase': 2,
+ 'summarize_architecture': False,
+ 'suv_cuv_only': False,
+ 'total_kimg': 7000,
+ 'train_side_view_only': False,
+ 'train_test_split_unique_models': True,
+ 'train_test_split_unique_models_and_average_ratings': False,
+ 'train_using_y_mu': True,
+ 'train_valid_test_ratio': 0.5,
+ 'training_criteria': 'l1',
+ 'use_TB': False,
+ 'use_checkpoint_sample_i': True,
+ 'use_cometML': False,
+ 'use_gen_recon_min_chance': 0.5,
+ 'use_generator_output_tanh': True,
+ 'use_gumbel_softmax': True,
+ 'use_label_loss': True,
+ 'use_loss_KL_egh': True,
+ 'use_loss_fake_D_KL': True,
+ 'use_loss_x_reco': True,
+ 'use_masks': True,
+ 'use_ram_for_image_load': False,
+ 'use_real_x_KL': True,
+ 'use_saved_baseline_features': False,
+ 'use_self_attention': False,
+ 'use_semisupervised_predictive_loss': True,
+ 'vae_loss': 'both',
+ 'vae_params_cond_a': True,
+ 'weight_decay': 0.0002,
+ 'y_KL_scale': 0.05}
+Creating result directory and logging for reproducibility
+Saving results to /mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/results/000-combined_model_train_modern_NewRun_iter2000000_seed0_1.0fracdata
+ 29%|##8       | 2000000/7000000 [00:00<?, ?it/s]/mnt/disk5/home/leranli/.conda/envs/aesthetics/lib/python3.8/site-packages/torch/nn/modules/linear.py:117: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
+  return F.linear(input, self.weight, self.bias)
+/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/models/model.py:131: UserWarning: `nn.functional.upsample` is deprecated. Use `nn.functional.interpolate` instead.
+  upsample = F.upsample(out, scale_factor=2)
+batch_num: 1; sample_it: 2000001; phase: 2; batch_size: 512.0; Alpha: 0.000; Res: 16; E_loss: 3.7646; G_Loss: 12.0344; Label_Loss: 0.0587, Mask_Loss: 0.0175, KL(real/fake/EGh): 12.224863/12.196933/12.034426; KL_y 0.0000; x-reco 3.6605; real_var 32487.2188, match_x 4.00:  29%|##8       | 2000000/7000000 [01:25<?, ?it/s]batch_num: 1; sample_it: 2000001; phase: 2; batch_size: 512.0; Alpha: 0.000; Res: 16; E_loss: 3.7646; G_Loss: 12.0344; Label_Loss: 0.0587, Mask_Loss: 0.0175, KL(real/fake/EGh): 12.224863/12.196933/12.034426; KL_y 0.0000; x-reco 3.6605; real_var 32487.2188, match_x 4.00:  29%|##8       | 2000512/7000000 [01:25<231:26:55,  6.00it/s]batch_num: 1; sample_it: 2000001; phase: 2; batch_size: 512.0; Alpha: 0.000; Res: 16; E_loss: 3.7646; G_Loss: 12.0344; Label_Loss: 0.0587, Mask_Loss: 0.0175, KL(real/fake/EGh): 12.224863/12.196933/12.034426; KL_y 0.0000; x-reco 3.6605; real_var 32487.2188, match_x 4.00
+Checkpointed to 2000512
+batch_num: 2; sample_it: 2000513; phase: 2; batch_size: 512.0; Alpha: 0.001; Res: 16; E_loss: 2.7373; G_Loss: 12.1074; Label_Loss: 0.0589, Mask_Loss: 0.0170, KL(real/fake/EGh): 12.172442/12.106617/12.107426; KL_y 0.0000; x-reco 2.5955; real_var 32095.0000, match_x 4.00:  29%|##8       | 2000512/7000000 [02:32<231:26:55,  6.00it/s]batch_num: 2; sample_it: 2000513; phase: 2; batch_size: 512.0; Alpha: 0.001; Res: 16; E_loss: 2.7373; G_Loss: 12.1074; Label_Loss: 0.0589, Mask_Loss: 0.0170, KL(real/fake/EGh): 12.172442/12.106617/12.107426; KL_y 0.0000; x-reco 2.5955; real_var 32095.0000, match_x 4.00:  29%|##8       | 2001024/7000000 [02:32<202:00:28,  6.87it/s]batch_num: 3; sample_it: 2001025; phase: 2; batch_size: 512.0; Alpha: 0.002; Res: 16; E_loss: 0.6904; G_Loss: 11.9826; Label_Loss: 0.0588, Mask_Loss: 0.0157, KL(real/fake/EGh): 12.058785/12.025560/11.982643; KL_y 0.0000; x-reco 0.5826; real_var 31763.7676, match_x 4.00:  29%|##8       | 2001024/7000000 [02:55<202:00:28,  6.87it/s]batch_num: 3; sample_it: 2001025; phase: 2; batch_size: 512.0; Alpha: 0.002; Res: 16; E_loss: 0.6904; G_Loss: 11.9826; Label_Loss: 0.0588, Mask_Loss: 0.0157, KL(real/fake/EGh): 12.058785/12.025560/11.982643; KL_y 0.0000; x-reco 0.5826; real_var 31763.7676, match_x 4.00:  29%|##8       | 2001536/7000000 [02:55<138:07:04, 10.05it/s]batch_num: 3; sample_it: 2001025; phase: 2; batch_size: 512.0; Alpha: 0.002; Res: 16; E_loss: 0.6904; G_Loss: 11.9826; Label_Loss: 0.0588, Mask_Loss: 0.0157, KL(real/fake/EGh): 12.058785/12.025560/11.982643; KL_y 0.0000; x-reco 0.5826; real_var 31763.7676, match_x 4.00:  29%|##8       | 2001536/7000000 [03:08<138:07:04, 10.05it/s]batch_num: 4; sample_it: 2001537; phase: 2; batch_size: 512.0; Alpha: 0.003; Res: 16; E_loss: 1.2860; G_Loss: 11.9619; Label_Loss: 0.0588, Mask_Loss: 0.0161, KL(real/fake/EGh): 12.081308/11.985101/11.961924; KL_y 0.0000; x-reco 1.1149; real_var 31822.0332, match_x 4.00:  29%|##8       | 2001536/7000000 [03:11<138:07:04, 10.05it/s]batch_num: 4; sample_it: 2001537; phase: 2; batch_size: 512.0; Alpha: 0.003; Res: 16; E_loss: 1.2860; G_Loss: 11.9619; Label_Loss: 0.0588, Mask_Loss: 0.0161, KL(real/fake/EGh): 12.081308/11.985101/11.961924; KL_y 0.0000; x-reco 1.1149; real_var 31822.0332, match_x 4.00:  29%|##8       | 2002048/7000000 [03:11<101:12:36, 13.72it/s]batch_num: 5; sample_it: 2002049; phase: 2; batch_size: 512.0; Alpha: 0.004; Res: 16; E_loss: 2.3401; G_Loss: 11.9417; Label_Loss: 0.0588, Mask_Loss: 0.0168, KL(real/fake/EGh): 12.070518/11.936911/11.941719; KL_y 0.0000; x-reco 2.1309; real_var 31793.1953, match_x 4.00:  29%|##8       | 2002048/7000000 [03:24<101:12:36, 13.72it/s]batch_num: 5; sample_it: 2002049; phase: 2; batch_size: 512.0; Alpha: 0.004; Res: 16; E_loss: 2.3401; G_Loss: 11.9417; Label_Loss: 0.0588, Mask_Loss: 0.0168, KL(real/fake/EGh): 12.070518/11.936911/11.941719; KL_y 0.0000; x-reco 2.1309; real_var 31793.1953, match_x 4.00:  29%|##8       | 2002560/7000000 [03:24<77:23:20, 17.94it/s] batch_num: 6; sample_it: 2002561; phase: 2; batch_size: 512.0; Alpha: 0.005; Res: 16; E_loss: 2.9187; G_Loss: 11.9925; Label_Loss: 0.0591, Mask_Loss: 0.0172, KL(real/fake/EGh): 12.130812/11.979816/11.992514; KL_y 0.0000; x-reco 2.6914; real_var 31961.4961, match_x 4.00:  29%|##8       | 2002560/7000000 [03:36<77:23:20, 17.94it/s]batch_num: 6; sample_it: 2002561; phase: 2; batch_size: 512.0; Alpha: 0.005; Res: 16; E_loss: 2.9187; G_Loss: 11.9925; Label_Loss: 0.0591, Mask_Loss: 0.0172, KL(real/fake/EGh): 12.130812/11.979816/11.992514; KL_y 0.0000; x-reco 2.6914; real_var 31961.4961, match_x 4.00:  29%|##8       | 2003072/7000000 [03:36<62:03:12, 22.37it/s]batch_num: 7; sample_it: 2003073; phase: 2; batch_size: 512.0; Alpha: 0.006; Res: 16; E_loss: 1.9819; G_Loss: 11.8880; Label_Loss: 0.0587, Mask_Loss: 0.0165, KL(real/fake/EGh): 12.018086/11.884580/11.887959; KL_y 0.0000; x-reco 1.7732; real_var 31635.3242, match_x 4.00:  29%|##8       | 2003072/7000000 [03:48<62:03:12, 22.37it/s]batch_num: 7; sample_it: 2003073; phase: 2; batch_size: 512.0; Alpha: 0.006; Res: 16; E_loss: 1.9819; G_Loss: 11.8880; Label_Loss: 0.0587, Mask_Loss: 0.0165, KL(real/fake/EGh): 12.018086/11.884580/11.887959; KL_y 0.0000; x-reco 1.7732; real_var 31635.3242, match_x 4.00:  29%|##8       | 2003584/7000000 [03:48<52:05:56, 26.64it/s]batch_num: 7; sample_it: 2003073; phase: 2; batch_size: 512.0; Alpha: 0.006; Res: 16; E_loss: 1.9819; G_Loss: 11.8880; Label_Loss: 0.0587, Mask_Loss: 0.0165, KL(real/fake/EGh): 12.018086/11.884580/11.887959; KL_y 0.0000; x-reco 1.7732; real_var 31635.3242, match_x 4.00:  29%|##8       | 2003584/7000000 [03:58<52:05:56, 26.64it/s]batch_num: 8; sample_it: 2003585; phase: 2; batch_size: 512.0; Alpha: 0.007; Res: 16; E_loss: 2.9089; G_Loss: 12.0676; Label_Loss: 0.0589, Mask_Loss: 0.0171, KL(real/fake/EGh): 12.210995/12.059429/12.067572; KL_y 0.0000; x-reco 2.6813; real_var 32173.2695, match_x 4.00:  29%|##8       | 2003584/7000000 [03:59<52:05:56, 26.64it/s]batch_num: 8; sample_it: 2003585; phase: 2; batch_size: 512.0; Alpha: 0.007; Res: 16; E_loss: 2.9089; G_Loss: 12.0676; Label_Loss: 0.0589, Mask_Loss: 0.0171, KL(real/fake/EGh): 12.210995/12.059429/12.067572; KL_y 0.0000; x-reco 2.6813; real_var 32173.2695, match_x 4.00:  29%|##8       | 2004096/7000000 [03:59<45:36:11, 30.43it/s]batch_num: 9; sample_it: 2004097; phase: 2; batch_size: 512.0; Alpha: 0.008; Res: 16; E_loss: 2.3307; G_Loss: 11.9354; Label_Loss: 0.0587, Mask_Loss: 0.0167, KL(real/fake/EGh): 12.075264/11.931435/11.935389; KL_y 0.0000; x-reco 2.1115; real_var 31799.6504, match_x 4.00:  29%|##8       | 2004096/7000000 [04:11<45:36:11, 30.43it/s]batch_num: 9; sample_it: 2004097; phase: 2; batch_size: 512.0; Alpha: 0.008; Res: 16; E_loss: 2.3307; G_Loss: 11.9354; Label_Loss: 0.0587, Mask_Loss: 0.0167, KL(real/fake/EGh): 12.075264/11.931435/11.935389; KL_y 0.0000; x-reco 2.1115; real_var 31799.6504, match_x 4.00:  29%|##8       | 2004608/7000000 [04:11<41:06:59, 33.75it/s]batch_num: 10; sample_it: 2004609; phase: 2; batch_size: 512.0; Alpha: 0.009; Res: 16; E_loss: 2.2403; G_Loss: 11.9305; Label_Loss: 0.0590, Mask_Loss: 0.0166, KL(real/fake/EGh): 12.073681/11.913076/11.930484; KL_y 0.0000; x-reco 2.0042; real_var 31794.2031, match_x 4.00:  29%|##8       | 2004608/7000000 [04:22<41:06:59, 33.75it/s]batch_num: 10; sample_it: 2004609; phase: 2; batch_size: 512.0; Alpha: 0.009; Res: 16; E_loss: 2.2403; G_Loss: 11.9305; Label_Loss: 0.0590, Mask_Loss: 0.0166, KL(real/fake/EGh): 12.073681/11.913076/11.930484; KL_y 0.0000; x-reco 2.0042; real_var 31794.2031, match_x 4.00:  29%|##8       | 2005120/7000000 [04:22<37:56:00, 36.58it/s]batch_num: 11; sample_it: 2005121; phase: 2; batch_size: 512.0; Alpha: 0.010; Res: 16; E_loss: 2.6287; G_Loss: 11.9191; Label_Loss: 0.0588, Mask_Loss: 0.0169, KL(real/fake/EGh): 12.073148/11.915316/11.919085; KL_y 0.0000; x-reco 2.3952; real_var 31790.7051, match_x 4.00:  29%|##8       | 2005120/7000000 [04:34<37:56:00, 36.58it/s]batch_num: 11; sample_it: 2005121; phase: 2; batch_size: 512.0; Alpha: 0.010; Res: 16; E_loss: 2.6287; G_Loss: 11.9191; Label_Loss: 0.0588, Mask_Loss: 0.0169, KL(real/fake/EGh): 12.073148/11.915316/11.919085; KL_y 0.0000; x-reco 2.3952; real_var 31790.7051, match_x 4.00:  29%|##8       | 2005632/7000000 [04:34<35:39:59, 38.90it/s]batch_num: 12; sample_it: 2005633; phase: 2; batch_size: 512.0; Alpha: 0.011; Res: 16; E_loss: 2.5354; G_Loss: 11.8176; Label_Loss: 0.0587, Mask_Loss: 0.0168, KL(real/fake/EGh): 11.961781/11.825798/11.817556; KL_y 0.0000; x-reco 2.3239; real_var 31465.1582, match_x 4.00:  29%|##8       | 2005632/7000000 [04:45<35:39:59, 38.90it/s]batch_num: 12; sample_it: 2005633; phase: 2; batch_size: 512.0; Alpha: 0.011; Res: 16; E_loss: 2.5354; G_Loss: 11.8176; Label_Loss: 0.0587, Mask_Loss: 0.0168, KL(real/fake/EGh): 11.961781/11.825798/11.817556; KL_y 0.0000; x-reco 2.3239; real_var 31465.1582, match_x 4.00:  29%|##8       | 2006144/7000000 [04:45<34:14:23, 40.51it/s]batch_num: 13; sample_it: 2006145; phase: 2; batch_size: 512.0; Alpha: 0.012; Res: 16; E_loss: 0.9290; G_Loss: 11.9006; Label_Loss: 0.0586, Mask_Loss: 0.0155, KL(real/fake/EGh): 12.037187/11.967360/11.900587; KL_y 0.0000; x-reco 0.7850; real_var 31684.8750, match_x 4.00:  29%|##8       | 2006144/7000000 [04:56<34:14:23, 40.51it/s]batch_num: 13; sample_it: 2006145; phase: 2; batch_size: 512.0; Alpha: 0.012; Res: 16; E_loss: 0.9290; G_Loss: 11.9006; Label_Loss: 0.0586, Mask_Loss: 0.0155, KL(real/fake/EGh): 12.037187/11.967360/11.900587; KL_y 0.0000; x-reco 0.7850; real_var 31684.8750, match_x 4.00:  29%|##8       | 2006656/7000000 [04:56<33:00:04, 42.03it/s]batch_num: 14; sample_it: 2006657; phase: 2; batch_size: 512.0; Alpha: 0.013; Res: 16; E_loss: 2.3870; G_Loss: 11.9329; Label_Loss: 0.0589, Mask_Loss: 0.0167, KL(real/fake/EGh): 12.079248/11.932280/11.932931; KL_y 0.0000; x-reco 2.1644; real_var 31809.1504, match_x 4.00:  29%|##8       | 2006656/7000000 [05:07<33:00:04, 42.03it/s]batch_num: 14; sample_it: 2006657; phase: 2; batch_size: 512.0; Alpha: 0.013; Res: 16; E_loss: 2.3870; G_Loss: 11.9329; Label_Loss: 0.0589, Mask_Loss: 0.0167, KL(real/fake/EGh): 12.079248/11.932280/11.932931; KL_y 0.0000; x-reco 2.1644; real_var 31809.1504, match_x 4.00:  29%|##8       | 2007168/7000000 [05:07<32:13:22, 43.04it/s]Terminated

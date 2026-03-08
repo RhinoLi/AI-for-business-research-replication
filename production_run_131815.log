@@ -1,0 +1,258 @@
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+/mnt/disk5/home/leranli/.conda/envs/aesthetics/bin/python
+/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/training/session.py:196: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(path)
+Beginning Experiment
+
+Beginning experiment on: NVIDIA GeForce RTX 4090
+Using  4  GPUs
+
+PyTorch 2.4.1+cu121
+Initializing Experiment...
+Loading Data...
+Using 6200 Train, 3100 Validation, 3100 Test Data
+Shuffling Data...
+700 chairs in the dataset
+
+Total Unlabeled Data at 100%: 31000
+
+Naive Baselines:
+Guess training mean: 0.4847
+Guess training median: 0.4854
+
+Validation Set: [  4   5   7   8  12  16  18  22  26  33  37  44  45  55  60  61  63  66
+  74  75  80  83  98 106 107 111 113 118 122 123 125 129 130 134 143 145
+ 146 150 152 154 159 168 170 177 179 180 182 183 185 189]
+
+
+Test Set: [  2  10  14  19  24  27  30  40  43  46  51  54  56  59  62  71  73  86
+  89  90  92  93  96  97 101 108 109 112 124 126 131 136 137 138 139 141
+ 144 149 153 160 163 175 178 181 184 187 194 195 196 197]
+
+Initializing Models...
+Starting phase: 4
+Starting from iteration 4018304
+Using new optimizers.
+Session created.
+{'adam_optim_betas_pretrain': (0.99, 0.999),
+ 'adjust_learning_rate_during_training': False,
+ 'arch': 'vgg16',
+ 'attribute': 'modern',
+ 'augment_images': False,
+ 'base_rating': 3.0,
+ 'bw_images': True,
+ 'checkpoint_cycle': 100,
+ 'comet_api_key': '',
+ 'comet_project_id': None,
+ 'comet_project_name': '',
+ 'comet_workspace': '',
+ 'cond_h_on_y': True,
+ 'conditional_model': True,
+ 'conventional_baseline_model': 'random_forest',
+ 'create_duplicate_ratings_for_viewpoints': True,
+ 'dataset': 'chairs',
+ 'dining_room_chair_full_inds_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/dining_room_chair_full_inds.csv',
+ 'dining_room_chair_labeled_inds_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/dining_room_chair_labeled_inds.csv',
+ 'dr_to_stdvae_ratio': 0.5,
+ 'e_lr': 0.0005,
+ 'empty_cache': True,
+ 'enc_spectral_norm': True,
+ 'enc_use_residual': True,
+ 'enc_use_squeeze_and_excite': True,
+ 'env': {'CUDA_DEVICE_ORDER': 'PCI_BUS_ID',
+         'CUDA_VISIBLE_DEVICES': '0,1,2,3',
+         'computer': 'server'},
+ 'epoch_begin_finetune': 10,
+ 'epochs_pretrained': 60,
+ 'epsilon': 1e-09,
+ 'evaluate_full_test_set': True,
+ 'evaluate_full_validation_set': True,
+ 'evaluate_full_validation_set_combined_model': True,
+ 'evaluate_side_view_only': True,
+ 'evaluate_using_y_mu': True,
+ 'evaluation_criteria': 'l1',
+ 'experiment_type': 'combined_model_train',
+ 'fake_D_KL_dr_scale': 0.5,
+ 'fake_D_KL_stdvae_scale': 2e-06,
+ 'fake_G_KL_dr_scale': 0.5,
+ 'fake_G_KL_stdvae_scale': 2e-06,
+ 'finetune_model': True,
+ 'finetune_optimizer': 'sgd',
+ 'freeze_encoder_weights': True,
+ 'freeze_pretrained_weights': True,
+ 'g_lr': 0.0005,
+ 'gen_spectral_norm': True,
+ 'gen_use_residual': True,
+ 'gen_use_squeeze_and_excite': True,
+ 'gpu_count': 4,
+ 'gumbel_softmax_temperature': 0.1,
+ 'image_size': 512,
+ 'images_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_data_grayscale.h5',
+ 'images_per_stage': 1000000,
+ 'inject_masks_into_encoder': False,
+ 'interpolate_N': 0,
+ 'label_loss_scale': 0.01,
+ 'label_loss_start_phase': 1,
+ 'labeled_data_cycle': 50,
+ 'labels_dir': None,
+ 'load_checkpoint': True,
+ 'load_checkpoint_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/results/002-combined_model_train_modern_NewRun_iter2000000_seed0_1.0fracdata/checkpoint/4018304_state',
+ 'load_state_dict_strict': False,
+ 'lr_finetune': 1e-05,
+ 'lr_pretrained': 0.0002,
+ 'manual_spec_norm': False,
+ 'mask_loss_scale': 0.025,
+ 'masks_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_data_masks.h5',
+ 'match_x_fade_in_scale': 4.0,
+ 'match_x_metric': 'L1',
+ 'match_x_scale': 2.0,
+ 'match_y_metric': 'L1',
+ 'max_phase': 6,
+ 'min_self_consistency': 0.75,
+ 'momentum': 0.9,
+ 'n_accumulate_gradients': 1,
+ 'n_critic': 1,
+ 'n_generator': 10,
+ 'n_label': 3,
+ 'n_latents': 512,
+ 'nc': 1,
+ 'noise': 'sphere',
+ 'norm_vae_params': False,
+ 'num_baseline_cpu_jobs': 12,
+ 'num_batches_per_epoch_pretrained': 100,
+ 'num_batches_print_freq_train': 10,
+ 'num_batches_print_freq_valid': 5,
+ 'num_combined_model_fc_units': 128,
+ 'num_data_workers': 6,
+ 'num_epoch_save_model_pretrained': 5,
+ 'num_pretrained_fc_units': 128,
+ 'num_random_batches_per_epoch_pretrained_evaluate': 50,
+ 'num_random_forest_trees': 100,
+ 'number_of_epochs_before_dropping_lr': 10,
+ 'number_viewpoints_per_product': 62,
+ 'nz': 509,
+ 'opt_betas': (0.0, 0.99),
+ 'opt_betas_predictor': (0.9, 0.99),
+ 'opt_epsilon': 1e-08,
+ 'optimizer': 'adam',
+ 'p_lr': 0.0002,
+ 'p_optimizer': 'adam',
+ 'percentage_of_training_data': 1.0,
+ 'percentage_of_unlabeled_data': 1.0,
+ 'pred_loss_scale': 0.5,
+ 'pred_loss_start_phase': 4,
+ 'predictive_model_nonlinear': True,
+ 'pretrained_model_use_attributes': True,
+ 'pretrained_tower_batchnorm': True,
+ 'print_frequency': 50,
+ 'progressive_phase_offset': 0,
+ 'progressive_step_offset': 0,
+ 'random_seed': 0,
+ 'rated_viewpoint': 25,
+ 'ratings_dataset_path': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/data/chair_ratings_traditional_modern.csv',
+ 'real_x_KL_dr_scale': 0.5,
+ 'real_x_KL_stdvae_scale': 2e-06,
+ 'reconstruct_transformed_labels': False,
+ 'reconstructions_N': 16,
+ 'reparametrize': False,
+ 'reset_optimizers': True,
+ 'result_dir': '/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/results',
+ 'sample_N': 16,
+ 'save_checkpoint_cycle': 1000,
+ 'save_checkpoints': True,
+ 'save_computed_baseline_features': False,
+ 'save_output_log': True,
+ 'self_attention_layer': 5,
+ 'sequentially_freeze_weights_during_training': True,
+ 'start_phase': 4,
+ 'summarize_architecture': False,
+ 'suv_cuv_only': False,
+ 'total_kimg': 7000,
+ 'train_side_view_only': False,
+ 'train_test_split_unique_models': True,
+ 'train_test_split_unique_models_and_average_ratings': False,
+ 'train_using_y_mu': True,
+ 'train_valid_test_ratio': 0.5,
+ 'training_criteria': 'l1',
+ 'use_TB': False,
+ 'use_checkpoint_sample_i': True,
+ 'use_cometML': False,
+ 'use_gen_recon_min_chance': 0.5,
+ 'use_generator_output_tanh': True,
+ 'use_gumbel_softmax': True,
+ 'use_label_loss': True,
+ 'use_loss_KL_egh': True,
+ 'use_loss_fake_D_KL': True,
+ 'use_loss_x_reco': True,
+ 'use_masks': True,
+ 'use_ram_for_image_load': False,
+ 'use_real_x_KL': True,
+ 'use_saved_baseline_features': False,
+ 'use_self_attention': False,
+ 'use_semisupervised_predictive_loss': True,
+ 'vae_loss': 'both',
+ 'vae_params_cond_a': True,
+ 'weight_decay': 0.0002,
+ 'y_KL_scale': 0.05}
+Creating result directory and logging for reproducibility
+Saving results to /mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/results/003-combined_model_train_modern_ContCheckpoint_iter4018304_seed0_1.0fracdata
+ 57%|#####7    | 4018304/7000000 [00:00<?, ?it/s]/mnt/disk5/home/leranli/.conda/envs/aesthetics/lib/python3.8/site-packages/torch/nn/modules/linear.py:117: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
+  return F.linear(input, self.weight, self.bias)
+/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/models/model.py:131: UserWarning: `nn.functional.upsample` is deprecated. Use `nn.functional.interpolate` instead.
+  upsample = F.upsample(out, scale_factor=2)
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [0,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [1,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [2,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [3,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [4,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [5,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [6,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [7,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [8,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [9,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [10,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [11,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [12,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [13,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [14,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [15,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [16,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [17,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [18,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [19,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [20,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [21,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [22,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [23,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [24,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [25,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [26,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [27,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [28,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [29,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [30,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+../aten/src/ATen/native/cuda/Loss.cu:94: operator(): block: [243,0,0], thread: [31,0,0] Assertion `input_val >= zero && input_val <= one` failed.
+Traceback (most recent call last):
+  File "experiment.py", line 439, in <module>
+    exp.run_experiment()
+  File "experiment.py", line 99, in run_experiment
+    train_combined_model(self.session.generator,
+  File "/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/training/train.py", line 306, in train_combined_model
+    mask_loss = mask_loss_criterion(recon_mask.squeeze(1), batch_masks) * session.c.mask_loss_scale
+  File "/mnt/disk5/home/leranli/.conda/envs/aesthetics/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/disk5/home/leranli/.conda/envs/aesthetics/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/disk5/home/leranli/project/ms21_product_aesthetic_design_replication_files/losses/losses.py", line 142, in forward
+    if loss > c.epsilon:
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+ 57%|#####7    | 4018304/7000000 [00:15<?, ?it/s]
